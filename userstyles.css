@@ -1,0 +1,162 @@
+@-moz-document url-prefix("https://mymasonportal.gmu.edu") {
+    :root {
+        /* color palette */
+        --background-color:  #141515;
+        --primary-color: rbg(00 102 51 / .98);
+        --secondary-color: #202222;
+        --nav-color: #1B241F;
+        --block-text-color: #ededed;
+        --accent-color-1: #00AB5E;
+        --link-color: #2A99D7;
+        --accent-color-2: #26332c;
+        --accent-color-3: #0a3624;
+    }
+    .institution-page-container {
+        background-color: var(--background-color);
+    }
+    
+    /* Side Bar tweak
+    .bb-inner-wrap,
+    .side-menu-footer {
+        background-color: var(--nav-color);
+        color: white;
+    }
+    */
+    
+    .institution-page-container .subheader {
+        color: white;
+    }
+    
+    .institution-page-container p {
+        color: var(--block-text-color);
+    }
+    
+    .institution-page-container ul :not(a) {
+        color: var(--block-text-color);
+    }
+    
+    .content-component__container {
+        background-color: var(--secondary-color);
+    }
+    .content-component__container li span {
+        color: var(--accent-color-1) !important;
+    }
+    .content-component__container a {
+        color: var(--link-color);
+    }
+    }
+    
+    @-moz-document url("https://mymasonportal.gmu.edu/") {
+    
+    #login-block .bbResources,
+    #login-block .bbResources p,
+    #login-block .systemAnnouncementsLogin,
+    #login-block .systemAnnouncementsLogin p,
+    #login-block .login-form span,
+    #login-block .login-form {
+        background-color: var(--background-color) !important;
+        color: var(--block-text-color) !important;
+    }
+    #login-block .bbResources h1,
+    #login-block .systemAnnouncementsLogin h1,
+    #login-block .login-form h1 {
+        color: white;
+    }
+    #login-block .systemAnnouncementsLogin a,
+    #login-block .login-form a {
+        color: var(--link-color);
+    }
+    #login-block .bbResources a {
+        color: var(--accent-color-1);
+    }
+    }
+    
+    @-moz-document url-prefix("https://shibboleth.gmu.edu") {
+    :root {
+        /* color palette */
+        --background-color:  #141515;
+        --primary-color: rbg(00 102 51 / .98);
+        --secondary-color: #202222;
+        --nav-color: #1B241F;
+        --block-text-color: #ededed;
+        --accent-color-1: #00AB5E;
+        --link-color: #2A99D7;
+        --accent-color-2: #26332c;
+        --accent-color-3: #0a3624;
+    }
+    a,
+    .content,
+    .wrapper {
+        background-color: var(--background-color) !important;
+    }
+    
+    input {
+        color: var(--block-text-color);
+        background-color: var(--secondary-color)
+    }
+    input:focus,
+    label {
+        color: var(--block-text-color) !important;
+    }
+    footer {
+        background-color: var(--accent-color-3);
+    }
+    }
+    
+    @-moz-document url("https://mymasonportal.gmu.edu/ultra/profile") {
+    #body-content {
+        background-color: var(--background-color);
+        color: white !important;
+    }
+    #body-content section h2 {
+        color: white;
+    }
+    section li {
+        background-color: var(--secondary-color) !important;
+        color: var(--block-text-color) !important;
+    }
+    section li span[ng-if],
+    section li a {
+        color: var(--link-color);
+    }
+    svg {
+        fill: white !important;
+    }
+    }
+    
+    @-moz-document url("https://mymasonportal.gmu.edu/ultra/tools") {
+    div[bb-first-time-container] {
+        background-color: var(--background-color);
+    }
+    div[bb-first-time-container] span,
+    div[bb-first-time-container] h1 {
+        color: white !important;
+    }
+    .grid-item a {
+        background-color: var(--secondary-color) !important;
+        color: var(--text-block-color) !important;
+    }
+    }
+    
+    @-moz-document url("https://mymasonportal.gmu.edu/ultra/stream") {
+    #main-content-inner{
+        background-color: var(--background-color);
+        color: white !important;
+    }
+    #main-content-inner h1,
+    #main-content-inner h2,
+    #main-content-inner a,
+    #main-content-inner span {
+        color: var(--block-text-color) !important;
+    }
+    #main-content-inner .js-show-more {
+        color: var(--link-color);
+    }
+    .content .summary {
+        color: var(--block-text-color) !important;
+    }
+    #main-content-inner .anchor {
+        color: var(--link-color);
+    }
+    
+    }
