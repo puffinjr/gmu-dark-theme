@@ -709,6 +709,28 @@
         background-color: var(--accent-color-2) !important;
             color: white;
     }
+    div.lb-header {
+        background-color: var(--accent-color-2) !important;
+    }
+    a.lb span {
+        background: var(--accent-color-2) !important;
+    }
+    #pageTitleText span {
+        color: white !important;
+    }
+    div.receipt {
+        color: white !important;
+        background-color: var(--background-color) !important;
+    }
+    #contentFrame * {
+    color: white !important;
+    }
+    #pageTitleText {
+    color: white !important;
+    }
+    #containerdiv a{
+        color: var(--link-color) !important;
+    }
     }
     
     @-moz-document url-prefix("https://mymasonportal.gmu.edu/webapps/blackboard/execute/modulepage") {
