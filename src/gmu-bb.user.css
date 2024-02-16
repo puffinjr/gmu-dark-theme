@@ -13,21 +13,25 @@
 
 ==/UserStyle== */
 
+:root {
+    /* color palette */
+    --background-color:  #141515;
+    --background-color-2: #202222;
+    --background-color-3: #2c2f2f;
+    --background-color-4: #1c1e1e;
+    --primary-color: rbg(00 102 51 / .98);
+    --nav-color: #1B241F;
+    --block-text-color: #ededed;
+    --accent-color-1: #00AB5E;
+    --accent-color-2: #26332c;
+    --accent-color-3: #0a3624;
+    --accent-color-4: #ffd700;
+    --link-color: #2A99D7;
+}
+
 @-moz-document url-prefix("https://mymasonportal.gmu.edu") {
-    :root {
-        /* color palette */
-        --background-color:  #141515;
-        --background-color-2: #202222;
-        --background-color-3: #2c2f2f;
-        --background-color-4: #1c1e1e;
-        --primary-color: rbg(00 102 51 / .98);
-        --nav-color: #1B241F;
-        --block-text-color: #ededed;
-        --accent-color-1: #00AB5E;
-        --accent-color-2: #26332c;
-        --accent-color-3: #0a3624;
-        --accent-color-4: #ffd700;
-        --link-color: #2A99D7;
+    .ms-Button-flexContainer svg path{
+        fill: darkgray !important;
     }
     }
     
@@ -117,19 +121,6 @@
     
     @-moz-document url-prefix("https://shibboleth.gmu.edu") {
     /* Login Page */
-    
-    :root {
-        /* color palette */
-        --background-color:  #141515;
-        --primary-color: rbg(00 102 51 / .98);
-        --background-color-2: #202222;
-        --nav-color: #1B241F;
-        --block-text-color: #ededed;
-        --accent-color-1: #00AB5E;
-        --link-color: #2A99D7;
-        --accent-color-2: #26332c;
-        --accent-color-3: #0a3624;
-    }
     a,
     .content,
     .wrapper {
@@ -203,6 +194,9 @@
         background-color: var(--background-color) !important;
         color: var(--text-block-color) !important;
     }
+    svg path {
+        fill: lightgray !important;
+    }
     
     }
     
@@ -224,7 +218,8 @@
     #main-content-inner h1,
     #main-content-inner h2,
     #main-content-inner a,
-    #main-content-inner span {
+    #main-content-inner span.date,
+    #main-content-inner span#filter-stream-value {
         color: var(--block-text-color) !important;
     }
     #main-content-inner .js-show-more {
@@ -261,7 +256,49 @@
     #streams-filter li a:hover {
         background-color: var(--background-color) !important;
     }
+    /* Icons */
+    svg[aria-label="PDF"],
+    svg[aria-label="Announcement"],
+    svg[aria-label="Video"],
+    svg[aria-label="Text Document"],
+    svg[aria-label="Link"],
+    svg[aria-label="Assignment"],
+    svg[aria-label="Discussion"],
+    svg[aria-label="Grades"] {
+        background-color: var(--background-color-4) !important;
+    }
+    li:hover svg[aria-label="PDF"],
+    li:hover svg[aria-label="Announcement"],
+    li:hover svg[aria-label="Video"],
+    li:hover svg[aria-label="Text Document"],
+    li:hover svg[aria-label="Link"],
+    li:hover svg[aria-label="Assignment"],
+    li:hover svg[aria-label="Discussion"],
+    li:hover svg[aria-label="Grades"] {
+        background-color: var(--background-color) !important;
+    }
+    svg[aria-label="PDF"] path,
+    svg[aria-label="Announcement"] path,
+    svg[aria-label="Video"] path,
+    svg[aria-label="Text Document"] path,
+    svg[aria-label="Link"] path,
+    svg[aria-label="Assignment"] path,
+    svg[aria-label="Discussion"] path,
+    svg[aria-label="Grades"] path {
+        fill: white !important;
+        stroke: var(--background-color-2) !important;
+    }
     
+    div.wrapping-input-style {
+        border: 2px solid black !important;
+    }
+    .base-header .select-value::after {
+        border-top-color: white !important;
+    }
+    svg.svg-icon.default.directional-icon {
+        fill: white !important;
+        stroke: white!important;
+    }
     }
     
     @-moz-document url("https://mymasonportal.gmu.edu/ultra/course") {
@@ -326,7 +363,7 @@
     
     div#page-selector-menu div {
         background-color: var(--background-color-2) !important;
-         border: 1px solid var(--block-text-color) !important;
+        border: 1px solid var(--block-text-color) !important;
     }
     div#page-selector-menu div li:hover {
         background-color: var(--background-color) !important;
@@ -342,9 +379,15 @@
         color: var(--block-text-color) !important;
     }
     .element-card.bar::before {
-        background-color: lightgray;
+        background-color: lightgray !important;
     }
-    
+    .page-size-component button::after,
+    .base-courses .select-value::after {
+        border-top-color: white !important;
+    }
+    svg.svg-icon.default.directional-icon {
+        stroke: white !important;
+    }
     
     }
     
@@ -424,13 +467,23 @@
     div#page-selector-menu div li[aria-selected="true"]:hover {
         background-color: var(--background-color) !important;
     }
+    .page-size-component button::after,
+    .base-courses .select-value::after {
+        border-top-color: white !important;
+    }
+    a.catalog-anchor-tag:hover svg.svg-icon {
+        stroke: darkgray !important;
+    }
+    a.catalog-anchor-tag svg.svg-icon {
+        stroke: lightgray !important;
+    }
     }
     
     @-moz-document url("https://mymasonportal.gmu.edu/ultra/calendar") {
     /* Calendar Page */
     
     .base-header {
-        background-color: var(--nav-color) !important;
+        background-color: var(--background-color) !important;
     }
     #main-content-inner :is(h1, h2, h3, h4, bdi, a, span){
         color: var(--block-text-color) !important;
@@ -460,7 +513,32 @@
         color: var(--block-text-color) !important;
     }
     
-    
+    svg.svg-icon.default.directional-icon {
+        fill: white !important;
+        stroke: white!important;
+    }
+    .month-link {
+        color: var(--block-text-color) !important;  
+    }
+    .calendar-wrapper .fullcalendar-container .fc-monthWithoutDD-view .fc-other-month.fc-day {
+        background-color: var(--background-color) !important;
+    }
+    .calendar-wrapper .fullcalendar-container .fc-monthWithoutDD-view .fc-other-month.fc-day:hover {
+        background-color: var(--background-color-3) !important;
+    }
+    .calendar-wrapper .fullcalendar-container .fc-monthWithoutDD-view .fc-day {
+        background-color: var(--background-color-2) !important;
+    }
+    button.today-toggle {
+        background-color: var(--background-color-3) !important;
+        color: white !important;
+    }
+    td.fc-state-highlight span {
+        background-color: var(--accent-color-3) !important;
+    }
+    bb-ui-content-icon svg path {
+        fill: white !important;
+    }
     }
     
     @-moz-document url("https://mymasonportal.gmu.edu/ultra/messages") {
@@ -489,7 +567,7 @@
     .base-header {
         background-color: var(--background-color) !important;
     }
-    #main-content-inner :is(h1, h2, h3, h4, bdi, a, span){
+    #main-content-inner :is(h1, h2, h3, h4, a, span){
         color: var(--block-text-color) !important;
     }
     div.slick-header {
@@ -509,6 +587,36 @@
     }
     .row.tabular-row.js-row:hover {
         background-color: var(--background-color) !important;
+    }
+    svg.svg-icon.default.directional-icon {
+        fill: white !important;
+        stroke: white!important;
+    }
+    button.semester-nav-button::before {
+        color: white !important;
+    }
+    div.columns.base-grades-empty-element {
+        background-color: pink !important;
+    }
+    .base-grades-wrapper .base-grades-term-wrapper .base-grades-empty-element {
+        background: linear-gradient(45deg, #1a1a1a .0625rem, #333 0, #333 calc(50% - .0625rem), #1a1a1a 0, #1a1a1a calc(50% + .0625rem), #333 0, #333 calc(100% - .0625rem), #1a1a1a 0) !important;
+    }
+    .base-grades-empty-state.text-center .main,
+    .base-grades-empty-state.text-center {
+        background-color: #333 !important;
+        color: white !important;
+    }
+    div.grade-color {
+        border: 3px solid black !important;
+        border-radius: 80px !important;
+    }
+    span.grade-input-display bdi,
+    div.grade-color * {
+        color: black !important;
+    }
+    bb-ui-icon-large-assignments svg path,
+    bb-ui-icon-large-calculation svg path {
+        fill: white;
     }
     }
     
