@@ -13,7 +13,6 @@
 
 ==/UserStyle== */
 
-
 @-moz-document url-prefix("https://mymasonportal.gmu.edu") {
     :root {
         /* color palette */
@@ -730,6 +729,10 @@
     }
     #containerdiv a{
         color: var(--link-color) !important;
+    }
+    .genericButton {
+        padding-inline: 4px !important;
+        color: var(--accent-color-4) !important;
     }
     }
     
